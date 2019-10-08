@@ -1,3 +1,7 @@
+
+
+
+
 list_1 = ['php', 'java', 'php', 'java', 'php', 'java', 'php', 'java', 'py', 'php', 'java', 'py']
 
 lengh = len(list_1)
