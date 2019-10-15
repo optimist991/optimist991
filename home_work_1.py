@@ -1,215 +1,119 @@
-# import math
-#
-#
-#
-# def formula(x, y):
-#     z = (x - y) / 1 + (x * y)
-#     print(z)
-#
-#
-# # вычеслить полупериод маятника длины l
-# def lengh(l):
-#     t = 2 * math.pi / l * 2
-#     print(t)
-#
-# # вычеслить углы треугольника
-# def triengl(a, b, c):
-#     v = math.acosh((a * 2) * (b * 2) * (c ** 2))/ 2 * (a * b)
-#     m = math.degrees(v)
-#     print(m)
-#
-# # а возвести в 5 и 19 степень используя только *
-# def a(a):
-#     a_5 = a * a * a * a * a
-#     print(a_5)
-#     a_19 = a ** 19
-#     print(a_19)
-#
-# # Написать цикл который будет число которое больше 0 возводить в квадрат и печатать
-# def squer(a, b, c):
-#     if a > 0:
-#         a = a ** 2
-#         print(a)
-#     else:
-#         print('less 0')
-#
-#     if b > 0:
-#         b = b ** 2
-#         print(b)
-#     else:
-#         print('less 0')
-#
-#     if c > 0:
-#         c = c ** 2
-#         print(c)
-#     else:
-#         print('less 0')
+"ДОМАШНЕЕ ЗАДАНИЕ № 2"
+"  2    15    28    41    54    7    20    33    46    59" "Shulga Andy"
 
-# Высокостный год
-# year = int(input())
-# if year % 4 != 0:
-#     print("usual year")
-# elif year % 100 == 0:
-#     if year % 400 == 0:
-#         print("intercalary year")
+# "2   Даны две строки. Определите, содержится ли меньшая по длине строка в большей."
+# def line_in_line(line_1, line_2):
+#     a = len(line_1)
+#     if line_1[:a] == line_2[:a]:
+#         print("Vxodit")
 #     else:
-#         print("usual year")
+#         print("no vxodit")
+#
+# line_in_line("Andy", "AndyShulga")
+
+"15  Дана строка. Если в строке больше трех различных символов, то удалить в строке три любых различных " \
+"символа, иначе добавить в строку в произвольных местах новые элементы так, чтобы количество различных " \
+"элементов было больше трех."
+
+# text = '1, 2'
+# mylist = text.split(', ')
+# print(len(mylist))
+# mylist_new = []
+# mylist_new_2 = []
+# if len(mylist) >= 3:
+#     mylist_new = mylist[3:]
+#     print(mylist_new)
 # else:
-#     print("intercalary year")
+#     mylist_new_2 = mylist
+#     mylist_new_2.append('answer for everething is 42')
+#     print(mylist_new_2)
 
-# a = int(input())
-# b = int(input())
-# # if a > b:
-# #     c = f'{a} more {b}'
-# # else:
-# #     c = f'{b} more {a}'
-# # print(c)
-# c = 5
-# # while c < 5:
-# #     print(a+b)
-# #     c += 1
-# for i in range(0, 5):
-#     print(a + b)
+"""28 Дано натуральное число. Получить строку, в которой тройки цифр этого числа разделены пробелом, 
+начиная с правого конца. Например, число 1234567 преобразуется в 1 234 567."""
+# a = list(str(input()))
+# res = [ ''.join(a[::-1][i:i+3])[::-1]
+#         for i in range(0,len(a),3)]
+# print(' '.join(res[::-1]))
 
-
-# m = int(input())
+"""41 Дана строка. Вставить после каждого символа два случайных символа."""
+# from random import randint
 #
-# if m <= 2 or m == 12:
-#     print('Winter')
-# elif 2 < m <= 5:
-#     print('Spring')
-# elif 5 < m <= 8:
-#     print('Summer')
-# elif 8 < m <= 11:
-#     print('Outam')
-# else:
-#     print("not in range 1 - 12")
-
-# deposit = 10000
-# pers = 0.75
-# years = 0
-# i = 0
-# while True:
-#     i += 1
-#     deposit = deposit * pers + deposit
-#     if years == i:
-#         print(deposit)
-#         break
-
-# def per(deposit, pers, years):
-#     i = 0
+# def random():
 #     while True:
-#         i += 1
-#         deposit = deposit * pers + deposit
-#         if years == i:
-#             print(deposit)
-#             break
+#         a = randint(65, 123)
+#         if not 90 < a < 97:
+#             return chr(a)
 #
-# per(10000, 0.75, 2)
+# s = input()
+# for c in s:
+#     print(c, random(), random(), sep='', end='')
 
-# a = [10, 20, 30, 40, 50, 60]
-# a.append(10)
-# print(a)
-# b = [10]
-# c = a + b
-# print(c)
+"""54 Дан текст. Найдите наибольшее количество идущих подряд цифр."""
 
-# dict
+# text="Hii`myoandmydaybirthday1988andiwant"
+# coun=0
+# max_num=0
+# for i in text:
+#   if (i.isdigit()):
+#     coun+=1
+#   else:
+#     if max_num<coun:
+#       max_num=coun
+#     counter=0
+# print(max_num)
+
+
+"""7 Дана строка. Вывести первый, последний и средний (если он есть)) символы."""
+
+# def middle(text):
+#     if len(text) % 2 == 0:
+#         a = "no inside letter"
+#     else:
+#         a = text[len(text) // 2]
+#     print(text[0], a, text[-1])
 #
-# a = {'key': 10}
-# # print(type(a['key']))
-# a.get('key2', 5)
-# b = {}
-# c = dict(key = 10, key2 = 'Hi')
-# # print(c)
+# middle('hell')
+
+"""20 Даны два слова. Найдите только те символы слов, которые встречаются в обоих словах только один раз."""
+
+
+# def same(word_1, word_2):
+#     for letter_1 in word_1:
+#         for letter_2 in word_2:
+#             if letter_1 == letter_2:
+#                 print(letter_1)
+#             else:
+#                 pass
 #
-# a = {'key': 10,
-#      'key2': 20}
-# print(a.keys())
-# print(a.values())
-# print(a.items())
-# print(a.copy())
-# print(a.pop('key'))
-# print(a)
-
-# def main():
-#     lan = ['php', 'java', 'py']
-# for _ in range(5):
-#     print('Hi')
-
-
-
-# a = '%'
-# if a.isdigit():
-#     print('Number')
 #
-# a = 'aAAAAAASSSDDDDDD'
-# print(a.find('f'))
-# print(a[-2: :-1])
-# print(a.strip())
-# print(a.lower())
+# same('andy', 'argi')
+
+"""33 Удалить в строке все лишние пробелы, то есть серии подряд идущих пробелов заменить на одиночные пробелы.
+ Крайние пробелы в строке удалить."""
 
 
-import math
-
-
-# import shlex
-# from collections import Counter
+# def del_space(text):
+#     text = text.strip()
+#     print(text)
+#     print(text.replace('      ', ' '))
 #
-# text = """Шасси такой модульной системы, как предполагается, будет представлять собой корпус с блоком питания,
-# охлаждением и пассивной объединительной платой со слотами PCIe Express, в которую будет устанавливаться основной модуль
-# ПК и, возможно, дополнительные платы расширения. Отличие от классической конструкции системного блока при этом
-# заключается в том, что роль материнской платы здесь исполняет простейшая объединительная плата со слотами, а основные
-# части компьютера, включая процессор, чипсет и память, заключены в заменяемый модуль, похожий по своему внешнему
-# исполнению на крупногабаритную карту расширения для слота PCI Express.
 #
-# В стенах Intel над данным проектом работает команда инженеров, занимающаяся системами семейства NUC. И именно поэтому
-#  этот проект выглядит похоже на представленную на Computex 2019 идею Intel NUC Compute Element — миниатюрных заменяемых
-#   вычислительных элементов для мобильных компьютеров. Новый, большой «Элемент» — это, фактически, десктопное и
-#   полноразмерное воплощение той же идеи, позволяющее пользователям получить в своё распоряжение более мощные и более
-#   гибкие модульные компьютеры класса NUC.
-# "Эле мент" "Эле мент" "Эле мент" "Эле мент"
-# На мероприятии представители Intel продемонстрировали пример такого основного модуля ПК. Показанный "Эле мент" выглядел
-#  подобно закрытой кожухом со встроенной системой охлаждения крупной двухслотовой видеокарте. Прототип базировался на
-#  процессоре Xeon в BGA-исполнении и содержал внутри себя два слота SO-DIMM LPDDR4, два слота M.2, а также набор
-#   дополнительных контроллеров, отвечающих за работу портов, выведенных наружу платы: USB, Ethernet,
-#   Thunderbolt и проч."""
+# del_space('  ghbdtn      ghjf    ')
+
+"""46 Строка состоит из слов, разделенных одним или несколькими пробелами. Переставьте слова по убыванию их длин."""
+
+# def sort(text):
 #
-# words = shlex.split(text)
-# words = [word for word in words if len(word) > 3]
-# Counter(words).most_common(3)
-# print(Counter(words).most_common(3))
-
-# lst = ['a', 10, 'abc', 10]
-# lst2 = []
-# print(lst.count(10))
-# lst.extend([10, 20, 30])
-# print(lst * 2)
-# lst.insert(0, 'A')
-# print(lst)
-# del lst[0]
-# print(lst)
-# lst.remove(10)
-# print(lst)
-
-# lst = [1, 2, 2, 3, 4, 4, 5]
-# print(lst)
-# print(set(lst))
-# a, b = (10, 20)
-# print(a)
-# print(b)
-
-# user, created = get_or_creat(id=3)
-
-# def to_set(lst):
-#     return set(lst)
+#     text = text.split(' ')
+#     text = sorted(text, key=len)
+#     print(text)
 #
-# lang = (['php', 'php', 'C++', 'php', 'py', 'py'])
-# long_set = set(lang)
-# res = dict()
-# for i in long_set:
-#     res[i] = lang.count(i)
-#     print(res)
+# sort('asdadaasdsadsa re fdfs  sdfsfsd')
 
 
+"""59 Замените в строке все вхождения 'word' на 'letter'."""
 
+# def change(text):
+#     print('Очень интересное задание - нихера не понял)')
+#
+# change('Chto-to')
